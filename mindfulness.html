@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="css/mindfulness.css" rel="stylesheet">
+    <title>Mindfulness | LuminaWellness</title>
+    
+</head>
+<body onload="updateTime(); initTimer();">
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-spa me-2"></i>LUMINA WELLNESS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mindfulness.html">Mindfulness</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nourishment.html">Nourishment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="movement.html">Movement</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diets.html">Diet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- </div>
+    </div> -->
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1 class="hero-title">Find Your Inner Peace</h1>
+            <p class="hero-subtitle">Daily meditation & stress reduction techniques to help you find balance and tranquility in your everyday life. Start your mindfulness journey today.</p>
+            <button class="hero-button" onclick="startMeditation();">Start Meditation</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Timer Section -->
+        <div class="timer-section">
+            <h2 class="section-title">Meditation Timer</h2>
+            <p class="section-subtitle">Set a timer for your meditation practice</p>
+            
+            <div class="timer-container">
+                <div class="timer-display" id="timerDisplay">05 : 00</div>
+                
+                <div class="timer-controls">
+                    <button class="timer-btn start-btn" id="startBtn" onclick="startTimer();">
+                        Start
+                    </button>
+                    <button class="timer-btn pause-btn" id="pauseBtn" onclick="pauseTimer();" disabled>
+                        Pause
+                    </button>
+                    <button class="timer-btn reset-btn" id="resetBtn" onclick="resetTimer();">
+                        Reset
+                    </button>
+                </div>
+                
+                <div class="preset-times" id="presetContainer">
+                    <div class="preset-time" onclick="setPresetTime(1, this);">1 min</div>
+                    <div class="preset-time" onclick="setPresetTime(3, this);">3 min</div>
+                    <div class="preset-time active" onclick="setPresetTime(5, this);">5 min</div>
+                    <div class="preset-time" onclick="setPresetTime(10, this);">10 min</div>
+                    <div class="preset-time" onclick="setPresetTime(15, this);">15 min</div>
+                    <div class="preset-time" onclick="setPresetTime(20, this);">20 min</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features Section -->
+        <h2 class="section-title">Wellness Tools & Resources</h2>
+        <p class="section-subtitle">Explore our collection of tools designed to enhance your mindfulness practice</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>Mindfulness</h3>
+                <p>Daily meditation & stress reduction techniques for mental clarity and emotional balance. Practice presence and awareness.</p>
+                <button class="feature-btn" onclick="showAlert('Exploring Mindfulness Resources');">Explore →</button>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Nourishment</h3>
+                <p>Wholesome recipes & dietary tips for optimal health and vitality. Nourish your body with mindful eating practices.</p>
+                <button class="feature-btn" onclick="showAlert('Exploring Nourishment Resources');">Explore →</button>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Movement</h3>
+                <p>Yoga, stretching & active living for body balance and energy. Connect movement with mindfulness.</p>
+                <button class="feature-btn" onclick="showAlert('Exploring Movement Resources');">Explore →</button>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Wellness Tools</h3>
+                <p>Trackers, calculators & resources for your health journey. Tools to support your holistic wellbeing.</p>
+                <button class="feature-btn" onclick="showAlert('Exploring Wellness Tools');">Explore →</button>
+            </div>
+        </div>
+        
+        <!-- Community Section -->
+        <div class="community-section">
+            <h2 class="community-title">Community Members</h2>
+            
+            <div class="community-stats">
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-text">Reported Improvement</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Expert Guides</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Support Available</div>
+                </div>
+            </div>
+            
+            <h3 class="section-title" style="color: white;">Your Wellness Journey</h3>
+            <p class="section-subtitle" style="color: #ecf0f1;">Choose your path to holistic wellbeing and discover balance in every aspect of life</p>
+        </div>
+        
+        <!-- Tips Section -->
+        <div class="timer-section">
+            <h2 class="section-title">Daily Mindfulness Tips</h2>
+            <p class="section-subtitle">Get personalized mindfulness advice based on your needs</p>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="feature-btn" style="padding: 15px 40px; font-size: 18px;" onclick="showMindfulnessTip();">Get Today's Tip</button>
+                <div id="tipResult" class="result-box" style="margin-top: 25px; padding: 20px; background-color: #ecf0f1; border-radius: 10px; display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand Column -->
+    <div class="footer-brand">
+      <div class="logo">
+        🌿 <span>LUMINA WELLNESS</span>
+      </div>
+      <p>
+        Holistic wellness platform for mind, body, and soul nourishment.
+        Find balance, clarity, and transformation on your wellness journey.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Wellness Links -->
+    <div class="footer-links">
+      <h4>Wellness</h4>
+      <a href="#">Mindfulness</a>
+      <a href="#">Nourishment</a>
+      <a href="#">Movement</a>
+      <a href="#">Wellness Tools</a>
+    </div>
+
+    <!-- Resources Links -->
+    <div class="footer-links">
+      <h4>Resources</h4>
+      <a href="#">BMI Calculator</a>
+      <a href="#">Sleep Tracker</a>
+      <a href="#">Meditation Timer</a>
+      <a href="#">Meal Planner</a>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>
+        Get weekly wellness tips, exclusive content, and special offers
+        delivered to your inbox
+      </p>
+
+      <form>
+        <input type="email" placeholder="Your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2023 LuminaWellness. All rights reserved. | AscentInnovate Software
+  </div>
+</footer>
+
+    <script src="js/mindfulness.js">
+    </script>
+</body>
+</html>

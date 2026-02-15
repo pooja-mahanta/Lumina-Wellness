@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movement & Vitality | LuminaWellness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/movement.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-spa me-2"></i>LUMINA WELLNESS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mindfulness.html">Mindfulness</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nourishment.html">Nourishment</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="movement.html">Movement</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diets.html">Diet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Movement Hero -->
+    <section class="movement-hero">
+        <div class="container">
+            <h1 class="fade-in">Embody Vitality</h1>
+            <p class="lead fade-in">Awaken your body with joyful movement — from gentle flows to energizing workouts. Find strength, flexibility, and inner peace through motion.</p>
+            <div class="fade-in">
+                <a href="#practices" class="btn btn-primary btn-lg me-3"
+                style="
+                    background: var(--gradient-primary);
+                    border: none;
+                    padding: 12px 35px;
+                    border-radius: 40px;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                ">Explore Practices</a>
+                <a href="#daily-flow" class="btn btn-outline-light btn-lg">Daily Flow</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Movement Practices -->
+    <section id="practices" class="py-5 section-bg" style="background: white;">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Movement practices</h2>
+                <p class="section-subtitle">Discover holistic workouts designed to harmonize body and mind</p>
+            </div>
+            <div class="row g-4">
+                <!-- Yoga Flow -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="practice-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="practice-img" alt="Yoga">
+                            <span class="practice-badge position-absolute top-0 start-0 m-3" style="background: var(--primary-color); color:white;">🌿 Mindful</span>
+                        </div>
+                        <div class="practice-content">
+                            <h3 class="practice-title">Hatha Vinyasa</h3>
+                            <p>Slow-flow sequences to build flexibility, balance, and breath awareness. Suitable for all levels.</p>
+                            <div class="practice-meta">
+                                <span><i class="far fa-clock"></i> 45 min</span>
+                                <span><i class="fas fa-level-up-alt"></i> Beginner+</span>
+                            </div>
+                            <button class="btn btn-movement" onclick="startPractice('Hatha Vinyasa')">Start Session</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pilates core -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="practice-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="practice-img" alt="Pilates">
+                            <span class="practice-badge position-absolute top-0 start-0 m-3" style="background: var(--accent-color); color:var(--dark-color);">⚡ Core</span>
+                        </div>
+                        <div class="practice-content">
+                            <h3 class="practice-title">Pilates Mat</h3>
+                            <p>Strengthen deep core muscles, improve posture, and tone with controlled, precise movements.</p>
+                            <div class="practice-meta">
+                                <span><i class="far fa-clock"></i> 30 min</span>
+                                <span><i class="fas fa-level-up-alt"></i> All levels</span>
+                            </div>
+                            <button class="btn btn-movement" onclick="startPractice('Pilates Mat')">Start Session</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mindful Walk/Run -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="practice-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="practice-img" alt="Walking meditation">
+                            <span class="practice-badge position-absolute top-0 start-0 m-3" style="background: var(--primary-light); color:var(--dark-color);">🌳 Nature</span>
+                        </div>
+                        <div class="practice-content">
+                            <h3 class="practice-title">Mindful Walk</h3>
+                            <p>Combine gentle cardio with meditation — walk in nature while cultivating present-moment awareness.</p>
+                            <div class="practice-meta">
+                                <span><i class="far fa-clock"></i> 20-60 min</span>
+                                <span><i class="fas fa-level-up-alt"></i> Easy</span>
+                            </div>
+                            <button class="btn btn-movement" onclick="startPractice('Mindful Walk')">Start Session</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Flow / Routine Section (-->
+    <section id="daily-flow" class="flow-section">
+        <div class="container">
+            <div class="flow-card fade-in">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h2 style="color: var(--dark-color);"><i class="fas fa-sun me-3" style="color: var(--accent-color);"></i>Today's movement flow</h2>
+                        <p class="mb-4" style="color: var(--gray-color);">A balanced 20-minute sequence to energize your morning or reset after work.</p>
+                        
+                        <div class="routine-item">
+                            <div class="routine-icon"><i class="fas fa-sun"></i></div>
+                            <div class="routine-text">
+                                <h5>Sun Salutations (5 min)</h5>
+                                <p>Warm up with 3 rounds of slow Surya Namaskar</p>
+                            </div>
+                        </div>
+                        <div class="routine-item">
+                            <div class="routine-icon"><i class="fas fa-fire"></i></div>
+                            <div class="routine-text">
+                                <h5>Core activation (5 min)</h5>
+                                <p>Planks, boat pose, and gentle twists</p>
+                            </div>
+                        </div>
+                        <div class="routine-item">
+                            <div class="routine-icon"><i class="fas fa-feather"></i></div>
+                            <div class="routine-text">
+                                <h5>Hip openers & balance (6 min)</h5>
+                                <p>Pigeon, warrior II, tree pose</p>
+                            </div>
+                        </div>
+                        <div class="routine-item">
+                            <div class="routine-icon"><i class="fas fa-moon"></i></div>
+                            <div class="routine-text">
+                                <h5>Savasana & breath (4 min)</h5>
+                                <p>Rest and integrate with deep breathing</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-movement mt-3" onclick="startPractice('Daily Flow')"><i class="fas fa-play me-2"></i>Start this flow</button>
+                    </div>
+                    <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="yoga flow" style="max-width:100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule + Weekly Challenge (2 column layout) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Upcoming classes -->
+                <div class="col-lg-7 fade-in">
+                    <div class="schedule-card">
+                        <h3 class="mb-4" style="color: var(--primary-color);"><i class="fas fa-calendar-alt me-2"></i>Live movement schedule</h3>
+                        <div class="class-item">
+                            <span><i class="fas fa-dumbbell me-2" style="color:var(--primary-color);"></i>Gentle Yoga</span>
+                            <span class="class-time">Mon 9:00 AM</span>
+                        </div>
+                        <div class="class-item">
+                            <span><i class="fas fa-heartbeat me-2" style="color:var(--primary-color);"></i>Cardio Dance</span>
+                            <span class="class-time">Wed 5:30 PM</span>
+                        </div>
+                        <div class="class-item">
+                            <span><i class="fas fa-leaf me-2" style="color:var(--primary-color);"></i>Mindful Stretch</span>
+                            <span class="class-time">Thu 12:15 PM</span>
+                        </div>
+                        <div class="class-item">
+                            <span><i class="fas fa-moon me-2" style="color:var(--primary-color);"></i>Evening Yin</span>
+                            <span class="class-time">Fri 6:00 PM</span>
+                        </div>
+                        <div class="class-item">
+                            <span><i class="fas fa-sun me-2" style="color:var(--primary-color);"></i>Weekend Hiking</span>
+                            <span class="class-time">Sat 8:00 AM</span>
+                        </div>
+                        <button class="btn btn-outline-movement w-100 mt-4" onclick="alert('Full schedule with zoom links coming soon!')">Join live session</button>
+                    </div>
+                </div>
+                <!-- 7-day challenge -->
+                <div class="col-lg-5 fade-in">
+                    <div class="challenge-card">
+                        <h3 class="mb-3"><i class="fas fa-trophy me-2"></i>7-Day movement challenge</h3>
+                        <p>Ignite your routine with daily 15-minute practices: yoga, pilates, and mindful walks. Track your progress and earn a wellness badge.</p>
+                        <ul style="list-style: none; padding:0; margin:2rem 0;">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Day 1: Sun salutations</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Day 2: Core & balance</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Day 3: Hip opening</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Day 4: Mindful walk</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Day 5: Full body stretch</li>
+                        </ul>
+                        <button class="btn btn-light" onclick="alert('Join the challenge — you will receive daily reminders!')">Join challenge</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspirational movement quote -->
+    <section class="py-5" style="background: linear-gradient(135deg, #F8F5F1 0%, #E8E2D9 100%);">
+        <div class="container">
+            <div class="quote-card mx-auto fade-in" style="max-width: 800px; background: var(--gradient-primary); color:white; padding: 3rem; border-radius:30px; text-align: center;">
+                <i class="fas fa-quote-left quote-icon mb-4" style="font-size: 3rem; opacity:0.8;"></i>
+                <h3 class="mb-4">"Movement is a medicine for creating change in a person's physical, emotional, and mental states."</h3>
+                <p class="fs-5">— Carol Welch</p>
+                <button class="btn btn-light mt-3" onclick="newMovementQuote()">More inspiration</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="index.html" class="footer-logo"><i class="fas fa-spa me-2"></i>LUMINA WELLNESS</a>
+                    <p class="mt-3">Holistic wellness platform for mind, body, and soul nourishment. Find balance, clarity, and transformation on your wellness journey.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Wellness</h5>
+                    <ul>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                        <li><a href="nourishment.html">Nourishment</a></li>
+                        <li><a href="movement.html">Movement</a></li>
+                        <li><a href="tools.html">Wellness Tools</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="tools.html#bmi">BMI Calculator</a></li>
+                        <li><a href="tools.html#sleep">Sleep Tracker</a></li>
+                        <li><a href="mindfulness.html#meditation">Meditation Timer</a></li>
+                        <li><a href="nourishment.html#recipes">Meal Planner</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Get weekly wellness tips, exclusive content, and special offers delivered to your inbox</p>
+                    <div class="input-group mt-3 newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your email address" id="newsletterEmail">
+                        <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+                    </div>
+                    <p id="subscriptionMessage" class="mt-2 small"></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LuminaWellness. All rights reserved. | AscentInnovate Software</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/movement.js"></script>
+    </script>
+</body>
+</html>

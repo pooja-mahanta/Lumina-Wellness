@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nourishment & Diet | LuminaWellness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+   <link href="css/diets.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-spa me-2"></i>LUMINA WELLNESS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mindfulness.html">Mindfulness</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="nourishment.html">Nourishment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="movement.html">Movement</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diets.html">Diet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nourishment Hero -->
+    <section class="nourishment-hero">
+        <div class="container">
+            <h1 class="fade-in">Nourish from Within</h1>
+            <p class="lead fade-in">Discover whole foods, balanced meals, and mindful eating practices that fuel your body and uplift your spirit.</p>
+            <div class="fade-in">
+                <a href="#recipes" class="btn btn-primary btn-lg me-3"
+                style="
+                background: var(--gradient-primary);
+                border: none;
+                padding: 12px 35px;
+                border-radius: 40px;
+                font-weight: 600;
+                transition: all 0.3s ease;"
+                opacity= "0.95">Explore Recipes</a>
+                <a href="#mealplan" class="btn btn-outline-light btn-lg">Today's Meal Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter buttons -->
+    <div class="container mt-5">
+        <div class="filter-buttons fade-in" id="recipe-filter">
+            <button class="filter-btn active" onclick="filterRecipes('all')">All</button>
+            <button class="filter-btn" onclick="filterRecipes('breakfast')">Breakfast</button>
+            <button class="filter-btn" onclick="filterRecipes('lunch')">Lunch</button>
+            <button class="filter-btn" onclick="filterRecipes('dinner')">Dinner</button>
+            <button class="filter-btn" onclick="filterRecipes('snack')">Snacks</button>
+            <button class="filter-btn" onclick="filterRecipes('vegetarian')">Vegetarian</button>
+        </div>
+    </div>
+
+    <!-- Recipe Grid -->
+    <section id="recipes" class="py-4">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Wholesome Recipes</h2>
+                <p class="section-subtitle">Nutrient-dense, delicious meals for every time of day</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Recipe 1 - Breakfast -->
+                <div class="col-lg-4 col-md-6 recipe-item" data-category="breakfast vegetarian">
+                    <div class="recipe-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="recipe-img" alt="Berry Bowl">
+                        <div class="recipe-content">
+                            <span class="recipe-badge">Breakfast</span>
+                            <h3 class="recipe-title">Berry Superfood Bowl</h3>
+                            <p class="text-muted">Greek yogurt, mixed berries, granola, chia & honey.</p>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 10 min</span>
+                                <span><i class="fas fa-leaf"></i> Vegetarian</span>
+                            </div>
+                            <button class="btn btn-nourishment" onclick="viewRecipe('berry-bowl')">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 - Lunch -->
+                <div class="col-lg-4 col-md-6 recipe-item" data-category="lunch vegetarian">
+                    <div class="recipe-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="recipe-img" alt="Quinoa Salad">
+                        <div class="recipe-content">
+                            <span class="recipe-badge">Lunch</span>
+                            <h3 class="recipe-title">Mediterranean Quinoa</h3>
+                            <p class="text-muted">Quinoa, cherry tomatoes, cucumber, feta, lemon herb.</p>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 25 min</span>
+                                <span><i class="fas fa-leaf"></i> Vegetarian</span>
+                            </div>
+                            <button class="btn btn-nourishment" onclick="viewRecipe('quinoa')">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 - Dinner -->
+                <div class="col-lg-4 col-md-6 recipe-item" data-category="dinner">
+                    <div class="recipe-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="recipe-img" alt="Salmon">
+                        <div class="recipe-content">
+                            <span class="recipe-badge">Dinner</span>
+                            <h3 class="recipe-title">Herb Baked Salmon</h3>
+                            <p class="text-muted">Wild salmon with asparagus, lemon, and garlic.</p>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 30 min</span>
+                                <span><i class="fas fa-fish"></i> Pescatarian</span>
+                            </div>
+                            <button class="btn btn-nourishment" onclick="viewRecipe('salmon')">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 4 - Snack -->
+                <div class="col-lg-4 col-md-6 recipe-item" data-category="snack vegetarian">
+                    <div class="recipe-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="recipe-img" alt="Energy balls">
+                        <div class="recipe-content">
+                            <span class="recipe-badge">Snack</span>
+                            <h3 class="recipe-title">Protein Energy Balls</h3>
+                            <p class="text-muted">Oats, peanut butter, honey, dark chocolate chips.</p>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 15 min</span>
+                                <span><i class="fas fa-leaf"></i> Vegan option</span>
+                            </div>
+                            <button class="btn btn-nourishment" onclick="viewRecipe('energy')">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 5 - Lunch/Dinner -->
+                <div class="col-lg-4 col-md-6 recipe-item" data-category="lunch vegetarian">
+                    <div class="recipe-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="recipe-img" alt="Buddha Bowl">
+                        <div class="recipe-content">
+                            <span class="recipe-badge">Bowl</span>
+                            <h3 class="recipe-title">Rainbow Buddha Bowl</h3>
+                            <p class="text-muted">Chickpeas, sweet potato, avocado, tahini dressing.</p>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 30 min</span>
+                                <span><i class="fas fa-leaf"></i> Vegan</span>
+                            </div>
+                            <button class="btn btn-nourishment" onclick="viewRecipe('buddha')">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 6 - Breakfast -->
+                <div class="col-lg-4 col-md-6 recipe-item" data-category="breakfast">
+                    <div class="recipe-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="recipe-img" alt="Avocado toast">
+                        <div class="recipe-content">
+                            <span class="recipe-badge">Breakfast</span>
+                            <h3 class="recipe-title">Avocado Toast Deluxe</h3>
+                            <p class="text-muted">Sourdough, avocado, poached egg, microgreens.</p>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 10 min</span>
+                                <span><i class="fas fa-egg"></i> Protein-rich</span>
+                            </div>
+                            <button class="btn btn-nourishment" onclick="viewRecipe('avocado')">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meal Plan & Nutrition Stats -->
+    <section id="mealplan" class="py-5" style="background: var(--gradient-secondary);">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Today's Meal Plan -->
+                <div class="col-lg-8 fade-in">
+                    <div class="mealplan-card">
+                        <h3 class="mb-4" style="color: var(--primary-color);"><i class="fas fa-calendar-check me-2"></i>Today's Mindful Meal Plan</h3>
+                        <div class="meal-item">
+                            <div class="meal-icon"><i class="fas fa-sun"></i></div>
+                            <div class="meal-text">
+                                <h5>Breakfast (8:00 am)</h5>
+                                <p>Oatmeal with berries, walnuts, and a drizzle of maple syrup</p>
+                            </div>
+                        </div>
+                        <div class="meal-item">
+                            <div class="meal-icon"><i class="fas fa-apple-alt"></i></div>
+                            <div class="meal-text">
+                                <h5>Morning Snack (10:30 am)</h5>
+                                <p>Greek yogurt with flax seeds and an apple</p>
+                            </div>
+                        </div>
+                        <div class="meal-item">
+                            <div class="meal-icon"><i class="fas fa-utensils"></i></div>
+                            <div class="meal-text">
+                                <h5>Lunch (1:00 pm)</h5>
+                                <p>Quinoa salad with chickpeas, cucumber, feta, and lemon-tahini</p>
+                            </div>
+                        </div>
+                        <div class="meal-item">
+                            <div class="meal-icon"><i class="fas fa-mug-hot"></i></div>
+                            <div class="meal-text">
+                                <h5>Afternoon Snack (4:00 pm)</h5>
+                                <p>Hummus with carrot & cucumber sticks</p>
+                            </div>
+                        </div>
+                        <div class="meal-item">
+                            <div class="meal-icon"><i class="fas fa-moon"></i></div>
+                            <div class="meal-text">
+                                <h5>Dinner (7:00 pm)</h5>
+                                <p>Baked tofu with roasted broccoli and sweet potato</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-nourishment mt-3" onclick="newMealPlan()"><i class="fas fa-redo me-2"></i>Generate new plan</button>
+                    </div>
+                </div>
+                <!-- Daily nutrition stats -->
+                <div class="col-lg-4 fade-in">
+                    <div class="stats-mini-card">
+                        <h4 class="mb-4">Daily targets</h4>
+                        <div class="stat-circle">2000</div>
+                        <p class="text-muted">Calories</p>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Protein</span> <strong>75g</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Carbs</span> <strong>250g</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Fats</span> <strong>55g</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Fiber</span> <strong>30g</strong>
+                        </div>
+                        <button class="btn btn-outline-nourishment w-100 mt-3" onclick="trackNutrition()">Track intake</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #F8F5F1 0%, #E8E2D9 100%);">
+        <div class="container">
+            <div class="quote-card mx-auto fade-in" style="max-width: 800px; background: var(--gradient-primary); color:white; padding: 3rem; border-radius:30px; text-align: center;">
+                <i class="fas fa-quote-left quote-icon mb-4" style="font-size: 3rem; opacity:0.8;"></i>
+                <h3 class="mb-4">"Let food be thy medicine and medicine be thy food."</h3>
+                <p class="fs-5">— Hippocrates</p>
+                <button class="btn btn-light mt-3" onclick="newNutritionQuote()">More wisdom</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="index.html" class="footer-logo"><i class="fas fa-spa me-2"></i>LUMINA WELLNESS</a>
+                    <p class="mt-3">Holistic wellness platform for mind, body, and soul nourishment. Find balance, clarity, and transformation on your wellness journey.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Wellness</h5>
+                    <ul>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                        <li><a href="nourishment.html">Nourishment</a></li>
+                        <li><a href="movement.html">Movement</a></li>
+                        <li><a href="tools.html">Wellness Tools</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="tools.html#bmi">BMI Calculator</a></li>
+                        <li><a href="tools.html#sleep">Sleep Tracker</a></li>
+                        <li><a href="mindfulness.html#meditation">Meditation Timer</a></li>
+                        <li><a href="nourishment.html#recipes">Meal Planner</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Get weekly wellness tips, exclusive content, and special offers delivered to your inbox</p>
+                    <div class="input-group mt-3 newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your email address" id="newsletterEmail">
+                        <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+                    </div>
+                    <p id="subscriptionMessage" class="mt-2 small"></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LuminaWellness. All rights reserved. | AscentInnovate Software</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/diets.js">
+    </script>
+</body>
+</html>
